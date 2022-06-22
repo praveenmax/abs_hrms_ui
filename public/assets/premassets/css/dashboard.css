@@ -58,7 +58,7 @@
   content: '\f011';
   font-size: 28px;
   font-family: FontAwesome !important;
-  padding: 7px 0px 0px 5px;
+  padding: 2px 0px 0px 5px;
 }
 
 .text-purple {
@@ -377,6 +377,7 @@ input:checked + .slider:before {
 
 /* calender code */
 
+
 #calendar .header {
   position: absolute;
   flex: 0 0 50%;
@@ -396,6 +397,16 @@ input:checked + .slider:before {
 .visualmonthyear {
   padding-top: 0 !important;
 }
+
+/* ring-number {
+  padding: 8px;
+  color: white;
+  position: absolute;
+  background: blue;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  text-align: center; */
 
 
 /* tooltip */
@@ -500,3 +511,22 @@ input:checked + .slider:before {
   border-radius: 50% !important;
   padding: 3px 5px 3px 5px;
 }
+
+
+.wrap-text {
+  display: inline-block;
+  /* width: 180px; */
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+
+.wrap-text:hover {
+  overflow: visible;
+  white-space: normal;
+}
+
+/* .wrap-text:hover {
+  margin-top: 20px;
+} */
