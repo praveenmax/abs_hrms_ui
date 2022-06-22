@@ -530,3 +530,45 @@ input:checked + .slider:before {
 /* .wrap-text:hover {
   margin-top: 20px;
 } */
+
+
+/* calendar */
+
+
+.fc-today-button {
+  display: none !important;
+}
+
+.fc-button-group {
+  position: absolute;
+  display: flex;
+  top: 0;
+  right: 0;
+}
+
+.fc-prev-button {
+  right: 145%;
+  border: none !important;
+  color: orange !important;
+}
+
+.fc-next-button {
+  border: none !important;
+  color: orange !important;
+}
+
+.fc-left {
+  position: absolute;
+  right: 15%;
+  width: 31%;
+  top: 0;
+  margin: 0 !important;
+}
+
+.fc-left h2 {
+  font-size: 12px !important;
+}
+
+.fc-toolbar {
+  margin: 0 !important;
+}
