@@ -44,9 +44,9 @@
                         <div class="row pl-2 pr-2 media-query">
                             <div class="col-sm-6 col-md-6">
                                 <div class="row mt-2">
-                                    <p class="pl-3 mr-3"><img src="{{ URL::asset('/assets/premassets/img/frontend.jpg') }}" class="img-round"></p>
+                                    <p class="pl-3 mr-3"><img src="{{ URL::asset('/assets/premassets/img/client-img5.png') }}" class="img-round"></p>
                                     <div class="pt-2">
-                                        <h6><b>Forrest gump</b></h6>
+                                        <h6><b>Admin</b></h6>
                                         <p class="text-muted f-13">CRT234</p>
                                         <p class="text-muted f-13">Software engineer</p>
                                     </div>
@@ -565,16 +565,6 @@
 
                 </div>
             </div>
-
-            <div class="row mt-5 mb-4 footer">
-                <div class="col-sm-8">
-                    <span>&copy; All rights reserved 2019 designed by <a class="text-theme" href="#">A-Fusion</a></span>
-                </div>
-                <div class="col-sm-4 text-right">
-                    <a href="#" class="ml-2">Contact Us</a>
-                    <a href="#" class="ml-2">Support</a>
-                </div>
-            </div>
         </div>
     </div>
 <!--Main Content-->
@@ -651,8 +641,7 @@ const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
 
 const d = new Date();
 
-document.getElementById("displayDay").innerHTML = monthNames[d.getMonth()] + " " + d.getDate() + "," + d
-    .getFullYear() + " " + dayName;
+document.getElementById("displayDay").innerHTML = monthNames[d.getMonth()] + " " + d.getDate() + "," + d.getFullYear() + " " + dayName;
 
 
 function displayTimes() {
