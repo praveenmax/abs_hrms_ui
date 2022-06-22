@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{ URL::asset('/assets/premassets/css/quicksand.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('/assets/premassets/css/dashboard.css') }}">
     <!--Bootstrap Calendar-->
-    <link rel="stylesheet" href="{{ URL::asset('/assets/premassets/css/bootstrap_calendar.css') }}">
+    <!-- <link rel="stylesheet" href="{{ URL::asset('/assets/premassets/css/bootstrap_calendar.css') }}"> -->
 
     <!--Font Awesome-->
     <link rel="stylesheet" href="{{ URL::asset('/assets/premassets/css/fontawesome-all.min.css') }}">
@@ -24,6 +24,11 @@
     <!--Map-->
     <link rel="stylesheet" href="{{ URL::asset('/assets/premassets/css/jquery-jvectormap-2.0.2.css') }}">
 
+    
+    <!-- calendar -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 <!-- prem content end -->
 
 
@@ -162,7 +167,8 @@
                                 <div class="row">
                                     <h6 class="mr-1 col-sm-6 col-md-6 col-xs-6 pr-0"><b class="wrap-text" style="width:50%;"><i class="fa fa-circle-o mr-1 text-danger"></i>My Calendar</b></h6>
                                 </div>
-                                <div id="calendar" style="width:100%; overflow: auto;"></div>
+                                <!-- <div id="calendar" style="width:100%; overflow: auto;"></div> -->
+                                <div id='full_calendar_events'></div>
                             </div>
                         </div>
                     </div>
@@ -201,16 +207,6 @@
                                                 <a class="dropdown-item f-11" href="#"> Time off</a>
                                                 <a class="dropdown-item f-11" href="#"> Short time Off</a>
                                                 <a class="dropdown-item f-11" href="#"> Compensatory time off</a>
-                                            </div>
-                                            <div class="dropdown">
-                                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Dropdown button
-                                                </button>
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <a class="dropdown-item" href="#">Something else here</a>
-                                                </div>
                                             </div>                                                  
                                         </h6>
                                     </div>
@@ -612,8 +608,11 @@
     <script src="{{ URL::asset('/assets/premassets/js/maps/jquery-jvectormap-world-mill-en.js') }}"></script>
     <script src="{{ URL::asset('/assets/premassets/js/maps/jvector-maps.js') }}"></script>
     <!--Bootstrap Calendar JS-->
-    <script src="{{ URL::asset('/assets/premassets/js/calendar/bootstrap_calendar.js') }}"></script>
-    <script src="{{ URL::asset('/assets/premassets/js/calendar/demo.js') }}"></script>
+    <!-- <script src="{{ URL::asset('/assets/premassets/js/calendar/bootstrap_calendar.js') }}"></script>
+    <script src="{{ URL::asset('/assets/premassets/js/calendar/demo.js') }}"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
     <!--Nice select-->
     <script src="{{ URL::asset('/assets/premassets/js/jquery.nice-select.min.js') }}"></script>
 
@@ -638,72 +637,72 @@
 // var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 // var d = new Date(dateString);
 // var dayName = days[d.getDay()];
-var dayIndex = new Date().getDay();
-const getDayName = (dayIndex) => {
-    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-    return days[dayIndex];
-}
-const dayName = getDayName(dayIndex)
-const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-];
+// var dayIndex = new Date().getDay();
+// const getDayName = (dayIndex) => {
+//     const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+//     return days[dayIndex];
+// }
+// const dayName = getDayName(dayIndex)
+// const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+//     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+// ];
 
-const d = new Date();
+// const d = new Date();
 
-document.getElementById("displayDay").innerHTML = monthNames[d.getMonth()] + " " + d.getDate() + "," + d.getFullYear() + " " + dayName;
-
-
-function displayTimes() {
-
-    var date = new Date();
-    var hrs = date.getHours();
-    var mins = date.getMinutes();
-    var secs = date.getSeconds();
-
-    var sessions = document.getElementById("session");
-
-    if (hrs > 12) {
-        session.innerHTML = "PM";
-
-    } else {
-        session.innerHTML = "PM";
-    }
-
-    if (hrs > 12) {
-        hrs = hrs - 12;
-    }
-
-    if (mins <= 9) {
-        mins = "0" + mins;
-    }
-    if (secs <= 9) {
-        secs = "0" + secs;
-    }
-
-    document.getElementById("time").innerHTML = hrs + ":" + mins + ":" + secs;
-}
-setInterval(displayTimes, 10);
+// document.getElementById("displayDay").innerHTML = monthNames[d.getMonth()] + " " + d.getDate() + "," + d.getFullYear() + " " + dayName;
 
 
-// for counter number
+// function displayTimes() {
 
-const counters = document.querySelectorAll('.count');
-// Main function
-for (let n of counters) {
-    const updateCount = () => {
-        const target = +n.getAttribute('data-target');
-        const count = +n.innerText;
-        const speed = 1000; // change animation speed here
-        const inc = target / speed;
-        if (count < target) {
-            n.innerText = Math.ceil(count + inc);
-            setTimeout(updateCount, 1);
-        } else {
-            n.innerText = target;
-        }
-    }
-    updateCount();
-}
+//     var date = new Date();
+//     var hrs = date.getHours();
+//     var mins = date.getMinutes();
+//     var secs = date.getSeconds();
+
+//     var sessions = document.getElementById("session");
+
+//     if (hrs > 12) {
+//         session.innerHTML = "PM";
+
+//     } else {
+//         session.innerHTML = "PM";
+//     }
+
+//     if (hrs > 12) {
+//         hrs = hrs - 12;
+//     }
+
+//     if (mins <= 9) {
+//         mins = "0" + mins;
+//     }
+//     if (secs <= 9) {
+//         secs = "0" + secs;
+//     }
+
+//     document.getElementById("time").innerHTML = hrs + ":" + mins + ":" + secs;
+// }
+// setInterval(displayTimes, 10);
+
+
+// // for counter number
+
+// const counters = document.querySelectorAll('.count');
+// // Main function
+// for (let n of counters) {
+//     const updateCount = () => {
+//         const target = +n.getAttribute('data-target');
+//         const count = +n.innerText;
+//         const speed = 1000; // change animation speed here
+//         const inc = target / speed;
+//         if (count < target) {
+//             n.innerText = Math.ceil(count + inc);
+//             setTimeout(updateCount, 1);
+//         } else {
+//             n.innerText = target;
+//         }
+//     }
+//     updateCount();
+// }
 
 
 
