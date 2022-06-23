@@ -42,10 +42,9 @@
 
     <div class="main">
         <div class="">
-            <div class="row mt-1">
+            <div class="row ml-1 mt-1">
                 <div class="col-sm-6 col-md-6 ipad-query">
-                    <!--Analytics-->
-                    <div class="mt-1 mb-3 p-3 button-container bg-white shadow-sm border">
+                    <div class="mt-1 mb-3 p-3 button-container bg-white shadow-sm border" style="height: 95%;">
                         <div class="row pl-2 pr-2 media-query">
                             <div class="col-sm-6 col-md-6">
                                 <div class="row mt-2">
@@ -134,18 +133,15 @@
                             </div>
                         </div>
                     </div>
-                    <!--/Analytics-->
-
                 </div>
-
                 <div class="col-sm-6 col-md-6 ipad-query">
-                    <div class="mt-1 mb-3 p-3 button-container bg-white shadow-sm border">
-                        <div class="row pl-2 pr-2 media-query">
+                    <div class="mt-1 mb-3 p-3 button-container bg-white shadow-sm border" style="height: 95%;">
+                        <div class="row pl-2 pr-2 media-query" style="height:100%">
                             <div class="col-sm-6 col-md-6">
                                 <div class="">
                                     <h6 style="justify-content: center; align-items: center; display: inline-flex; "><b><i class="fa fa-circle-o mr-1 text-purple"></i>My Holidays</b><span class="text-muted f-11 mr-2"> - 2020</span></h6>
                                 </div>
-                                <div class="bg-muted" style="height:80%;overflow:auto;">
+                                <div class="bg-muted" style="height:calc(100% - 2em);overflow:auto;">
                                     <div class="row pl-3 pt-3" style="width:100%">
                                         <h6 class="mr-1 pl-3 f-11"><b><span data-text="Thanks for hovering! I'm a tooltip" class="tool-title cursor-pointer rounded-circle text-danger mr-3 f-13" style="background:orange;">M</span><span class="wrap-text" style="width:75%;">Sun, 26 Jan<span class="ml-3">Republic Day</span></span></b></h6>
                                     </div>
@@ -167,17 +163,15 @@
                                 <div class="row">
                                     <h6 class="mr-1 col-sm-6 col-md-6 col-xs-6 pr-0"><b class="wrap-text" style="width:50%;"><i class="fa fa-circle-o mr-1 text-danger"></i>My Calendar</b></h6>
                                 </div>
-                                <!-- <div id="calendar" style="width:100%; overflow: auto;"></div> -->
                                 <div id='full_calendar_events'></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="row mt-1">
+            <div class="row ml-1 mt-1">
                 <div class="col-sm-6 col-md-6 ipad-query">
-                    <div class="mt-1 mb-3 p-3 button-container bg-white shadow-sm border">
+                    <div class="mt-1 mb-3 p-3 button-container bg-white shadow-sm border" style="height: 95%;">
                         <div class="row pl-2 pr-2 media-query">
                             <div class="col-sm-5 col-md-5">
                                 <div class="bg-muted">
@@ -211,7 +205,6 @@
                                         </h6>
                                     </div>
                                 </div>
-                                
                                 <div class="mt-2">
                                     <div class="bg-box-color p-1">
                                         <div class="row pl-2 mt-2" style="justify-content:space-between;width:100%">
@@ -265,7 +258,7 @@
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-6 ipad-query">
-                    <div class="mt-1 mb-3 p-3 button-container bg-white shadow-sm border">
+                    <div class="mt-1 mb-3 p-3 button-container bg-white shadow-sm border" style="height: 95%;">
                         <div class="row pl-2 pr-2 media-query">
                             <div class="col-sm-12 col-md-12">
                                 <div class="mt-2 pt-1 pl-1">
@@ -328,11 +321,9 @@
                     </div>
                 </div>
             </div>
-
-            <div class="row mt-1">
+            <div class="row ml-1 mt-1">
                 <div class="col-sm-6 col-md-6 ipad-query">
-                    <!--Analytics-->
-                    <div class="mt-1 mb-3 p-3 button-container bg-white shadow-sm border" style="height: 300px; overflow: auto;">
+                    <div class="mt-1 mb-3 p-3 button-container bg-white shadow-sm border" style="height: 95%;" style="height: 300px; overflow: auto;">
                         <div class="row pl-2 pr-2 media-query">
                             <div class="col-sm-12 col-md-12">
                                 <div style="position: absolute;right: 7px;top: -14px;"><span class="rounded-circle text-danger f-13" style="background: pink;"><i class="fa fa-refresh text-danger"></i></span></div>
@@ -408,7 +399,6 @@
                                                     </div>
                                                 </li>
                                             </ul>
-                                        
                                             <div class="paddles">
                                                 <button class="left-paddle paddle hidden">
                                                     <
@@ -542,7 +532,6 @@
                                                     </div>
                                                 </li>
                                             </ul>
-                                        
                                             <div class="paddles-joiner">
                                                 <button class="left-paddle-joiner paddle-joiner hidden">
                                                     <
@@ -557,13 +546,11 @@
                             </div>
                         </div>
                     </div>
-                    <!--/Analytics-->
                 </div>
             </div>
-
             <div class="row mt-5 mb-4 footer">
                 <div class="col-sm-8">
-                    <span>&copy; All rights reserved 2019 designed by <a class="text-theme" href="#">A-Fusion</a></span>
+                    <span>&copy; All rights reserved 2022</span>
                 </div>
                 <div class="col-sm-4 text-right">
                     <a href="#" class="ml-2">Contact Us</a>
