@@ -48,10 +48,10 @@
                         <div class="row pl-2 pr-2 media-query">
                             <div class="col-sm-6 col-md-6">
                                 <div class="row mt-2">
-                                    <p class="pl-3 mr-3"><img src="{{ URL::asset('/assets/premassets/img/client-img5.png') }}" class="img-round"></p>
-                                    <div class="pt-2">
+                                    <p class="pl-3 col-auto"><img src="{{ URL::asset('/assets/premassets/img/client-img5.png') }}" class="img-round"></p>
+                                    <div class="pt-2 col">
                                         <h6><b>Admin</b></h6>
-                                        <p class="text-muted f-13">CRT234</p>
+                                        <p class="text-muted f-13 m-0">CRT234</p>
                                         <p class="text-muted f-13">Software engineer</p>
                                     </div>
                                 </div>
@@ -161,7 +161,7 @@
                             </div>
                             <div class="col-sm-6 col-md-6">
                                 <div class="row">
-                                    <h6 class="mr-1 col-sm-6 col-md-6 col-xs-6 pr-0"><b class="wrap-text" style="width:50%;"><i class="fa fa-circle-o mr-1 text-danger"></i>My Calendar</b></h6>
+                                    <h6 class="mr-1 col-sm-6 col-md-6 col-xs-6 pr-0"><b class="wrap-text"><i class="fa fa-circle-o mr-1 text-danger"></i>My Calendar</b></h6>
                                 </div>
                                 <div id='full_calendar_events'></div>
                             </div>
@@ -215,7 +215,7 @@
                                                     <p class="text-muted f-13"><b class="mr-1">3days</b>- 2 No 2019 - 4 Nov 2019</p>
                                                 </span>
                                             </div>
-                                            <h6 class="f-15 col-auto text-success content-query">
+                                            <h6 class="f-15 col-auto text-success content-query pr-0">
                                                 Success
                                             </h6>
                                         </div>
@@ -231,7 +231,7 @@
                                                     <p class="text-muted f-13"><b class="mr-1">1:00 Hours</b>12:00PM-01:00PM-2 Nov 2019</p>
                                                 </span>
                                             </div>
-                                            <h6 class="f-15 col-auto text-danger content-query">
+                                            <h6 class="f-15 col-auto text-danger content-query pr-0">
                                                 Reject
                                             </h6>
                                         </div>
@@ -247,7 +247,7 @@
                                                     <p class="text-muted f-13"><b class="mr-1">3days</b>- 2 No 2019 - 4 Nov 2019</p>
                                                 </span>
                                             </div>
-                                            <h6 class="f-15 col-auto text-primary content-query">
+                                            <h6 class="f-15 col-auto text-primary content-query pr-0">
                                                 Pending
                                             </h6>
                                         </div>
@@ -274,7 +274,7 @@
                                                     <p class="text-muted f-13">You missed<b class="ml-1 mr-1 text-success">Check-in</b>and<b class="text-danger ml-1">Check-Out</b></p>
                                                 </span>
                                             </div>
-                                            <h6 class="f-11 clock-center col-auto">
+                                            <h6 class="f-11 clock-center col-auto pr-0">
                                                 <span class="p-2" style="background:pink;">
                                                     Enter your name
                                                 </span>
@@ -292,7 +292,7 @@
                                                     <p class="text-muted f-13">You missed<b class="ml-1 mr-1 text-success">Check-in</b></p>
                                                 </span>
                                             </div>
-                                            <h6 class="f-11 clock-center col-auto">
+                                            <h6 class="f-11 clock-center col-auto pr-0">
                                                 <span class="p-2" style="background:pink;">
                                                     Enter your name
                                                 </span>
@@ -310,7 +310,7 @@
                                                     <p class="text-muted f-13">You missed<b class="ml-1 mr-1 text-success">Check-in</b>and<b class="text-danger ml-1">Check-Out - 07:00 PM</b></p>
                                                 </span>
                                             </div>
-                                            <h6 class="f-15 text-primary content-query col-auto">
+                                            <h6 class="f-15 text-primary content-query col-auto pr-0">
                                                 Pending
                                             </h6>
                                         </div>
@@ -546,15 +546,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row mt-5 mb-4 footer">
-                <div class="col-sm-8">
-                    <span>&copy; All rights reserved 2022</span>
-                </div>
-                <div class="col-sm-4 text-right">
-                    <a href="#" class="ml-2">Contact Us</a>
-                    <a href="#" class="ml-2">Support</a>
                 </div>
             </div>
         </div>

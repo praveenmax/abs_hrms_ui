@@ -535,7 +535,7 @@ input:checked + .slider:before {
 /* calendar */
 
 
-.fc-today-button {
+/* .fc-today-button {
   display: none !important;
 }
 
@@ -571,7 +571,7 @@ input:checked + .slider:before {
 
 .fc-toolbar {
   margin: 0 !important;
-}
+} */
 
 .fc-day-grid-container {
   overflow: auto !important;
